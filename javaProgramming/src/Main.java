@@ -54,17 +54,6 @@ class Human {
     }
 }
 
-class A{
-    public A() {
-        //super();
-        System.out.println("in A");
-    }
-
-    public A(int num) {
-        //super();
-        System.out.println("in A int");
-    }
-}
 
 class B extends A{
     public B() {
@@ -187,16 +176,165 @@ class J {
 }
 
 
+class A{
+    public void A() {
+        //super();
+        System.out.println("in A");
+    }
+
+    public void A(int num) {
+        //super();
+        System.out.println("in A int");
+    }
+}
+
+class N {
+    public void show() {
+        System.out.println("show in N show ");
+    }
+}
+
+// class M extends N {
+//     public void show() {
+//         System.out.println("show in M show ");
+//     }
+// }
+
+
+abstract class Computer {
+    public abstract void code();
+}
+
+class Developer {
+    public void DevApp(Computer lap) {
+        lap.code();
+    }
+}
+
+class Laptop extends Computer {
+    public void code() {
+        System.out.println("code , compile , run...");
+    }
+}
+
+class Desktop extends Computer {
+    public void code() {
+        System.out.println("code , compile , run : Faster...");
+    }
+}
+
+interface C {
+    int age = 10;
+    String name = "Ashu Gupta";
+    void Show();
+    void Config();
+}
+
+interface E {
+    void run();
+}
+
+interface F extends C, E {
+    void ear();
+}
+
+
+class D implements C {
+    public void Show() {
+        System.out.println("in show ");
+    }
+    public void Config() {
+        System.out.println("in Config");
+    }
+
+    public void run() {
+        System.out.println("running...");
+    }
+
+
+}
+enum Status {
+    SUCCESS, FIALED, PENDING, RUNNING;
+}
+
+interface Abc {
+    void show(int i);
+}
+
+// class Bcd implements Abc {
+//     @Override
+//     public void show() {
+//         System.out.println("hey Ashu...!");
+//     }
+// }
+
 
 public class Main {
     public static void main(String[] args) {
 
-        J j = new J();
-        j.show();
+        Abc bcd = (i) ->   System.out.println("in anonymous class..."+ i);
+            
+    
+        bcd.show(5);
 
 
-        J.K k = j.new K();
-        k.lough();
+       
+       
+
+
+
+
+
+
+
+        // C c = new D();
+        // c.Config();
+        // c.Show();
+        // //c.run();
+
+        // E e = new D();
+
+        // e.run();
+
+        // System.out.println(C.age);
+        // System.out.println(C.name);
+
+
+
+
+
+
+
+        // Developer dev = new Developer();
+        // //dev.DevApp();
+        // Computer computer = new Computer();
+        // Computer laptop = new Laptop();
+        // Computer desktop = new Desktop();
+        
+        // dev.DevApp(laptop);
+
+
+
+
+
+
+
+
+        // N n = new N(){
+        //     public void show() {
+        //         System.out.println("show in new show ");
+        //     }
+        // };
+        // n.show();
+
+
+        
+        // J j = new J();
+        // j.show();
+
+
+        // J.K k = j.new K();
+        // k.lough();
 
 
 
